@@ -1,4 +1,6 @@
-
+/* =========================
+   Reset básico
+========================= */
 * {
     margin: 0;
     padding: 0;
@@ -6,42 +8,49 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* =========================
+   Body y fondo
+========================= */
 body {
     background-image: url(https://wallpapers.com/images/hd/dark-texture-background-1ww1corpzr0l0sji.jpg);
-    color: #e98441; 
+    color: #00ff6a; /* Verde neón */
     line-height: 1.6;
 }
 
-
-
+/* =========================
+   Header
+========================= */
 header {
     background-color: #070707;
     padding: 20px;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(255, 0, 0, 0.3);
+    box-shadow: 0 4px 6px rgba(0, 255, 100, 0.3);
 }
 
 header h1 {
     font-size: 2.5rem;
-    color: #ff7300;
-    text-shadow: 2px 2px 4px rgba(255, 0, 0, 0.925);
+    color: #00ff6a;
+    text-shadow: 2px 2px 6px rgba(0, 255, 100, 0.8);
     margin-bottom: 10px;
 }
 
 header nav a {
-    color: #f15900;
+    color: #00ff6a;
     text-decoration: none;
     margin: 0 15px;
     font-weight: bold;
     transition: 0.3s;
 }
 
-header nav a:hover, header nav a.active {
-    color: #ff7b00;
-    text-shadow: 1px 1px 5px rgb(255, 0, 0);
+header nav a:hover,
+header nav a.active {
+    color: #00ff9a;
+    text-shadow: 1px 1px 5px rgba(0, 255, 100, 0.8);
 }
 
-
+/* =========================
+   Hero
+========================= */
 .hero {
     text-align: center;
     padding: 60px 20px;
@@ -50,21 +59,24 @@ header nav a:hover, header nav a.active {
 
 .hero h2 {
     font-size: 2rem;
-    color: #ff6600;
-    text-shadow: 2px 2px 8px rgb(255, 0, 0);
+    color: #00ff6a;
+    text-shadow: 2px 2px 8px rgba(0, 255, 100, 0.8);
     margin-bottom: 15px;
 }
 
 .hero p {
     font-size: 1.2rem;
-    text-shadow: 1px 1px 3px rgb(255, 0, 0);
+    text-shadow: 1px 1px 4px rgba(0, 255, 100, 0.7);
     margin-bottom: 20px;
 }
 
+/* =========================
+   Botones
+========================= */
 .btn {
     display: inline-block;
     padding: 12px 25px;
-    background-color: #ff080052;
+    background-color: #00ff6a22; /* Verde translúcido */
     color: #e6dbdb;
     text-decoration: none;
     font-weight: bold;
@@ -73,11 +85,13 @@ header nav a:hover, header nav a.active {
 }
 
 .btn:hover {
-    background-color: #cc4100;
-    box-shadow: 0 0 15px rgb(255, 0, 0);
+    background-color: #00ff6a88;
+    box-shadow: 0 0 15px #00ff6a;
 }
 
-
+/* =========================
+   Tarjetas
+========================= */
 .cards {
     display: flex;
     justify-content: center;
@@ -88,7 +102,7 @@ header nav a:hover, header nav a.active {
 
 .cards article {
     background-color: #111111;
-    border: 2px solid #ff7300;
+    border: 2px solid #00ff6a;
     border-radius: 12px;
     padding: 20px;
     width: 280px;
@@ -98,7 +112,7 @@ header nav a:hover, header nav a.active {
 
 .cards article:hover {
     transform: translateY(-10px);
-    box-shadow: 0 0 20px #ff4800;
+    box-shadow: 0 0 20px #00ff6a;
 }
 
 .cards img {
@@ -110,10 +124,12 @@ header nav a:hover, header nav a.active {
 .cards h3 {
     font-size: 1.5rem;
     margin-bottom: 10px;
-    text-shadow: 1px 1px 4px rgb(255, 30, 0);
+    text-shadow: 1px 1px 4px rgba(0, 255, 100, 0.7);
 }
 
-
+/* =========================
+   Ranking
+========================= */
 .ranking {
     padding: 40px 20px;
     max-width: 800px;
@@ -124,40 +140,94 @@ header nav a:hover, header nav a.active {
     font-size: 2rem;
     text-align: center;
     margin-bottom: 25px;
-    text-shadow: 2px 2px 6px rgb(255, 38, 0);
+    text-shadow: 2px 2px 6px rgba(0, 255, 100, 0.7);
 }
 
-.ranking ol {
-    list-style: decimal;
-    padding-left: 20px;
+/* Listas */
+.ranking ol,
+.featured ul {
+    padding-left: 0;
+    list-style: none;
+    max-width: 800px;
+    margin: auto;
 }
 
-.ranking li {
+.ranking ol li,
+.featured ul li {
+    position: relative;
+    background-color: rgba(0, 255, 106, 0.05); /* fondo ligero verde */
+    margin-bottom: 12px;
+    padding: 12px 18px;
+    border-left: 4px solid #00ff6a; /* barra verde a la izquierda */
+    border-radius: 6px;
     font-size: 1.2rem;
-    margin-bottom: 15px;
-    text-shadow: 1px 1px 3px rgb(255, 51, 0);
+    color: #00ff6a;
+    text-shadow: 1px 1px 4px rgba(0, 255, 100, 0.8);
 }
 
+/* Numeración personalizada para ol */
+.ranking ol li::before {
+    content: counter(li);
+    counter-increment: li;
+    position: absolute;
+    left: -35px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: bold;
+    color: #00ff6a;
+    text-shadow: 1px 1px 6px rgba(0, 255, 100, 0.8);
+}
 
+/* Reiniciamos contador */
+.ranking ol {
+    counter-reset: li;
+}
+
+/* Viñetas personalizadas para ul */
+.featured ul li::before {
+    content: '•';
+    color: #00ff6a;
+    display: inline-block;
+    width: 20px;
+    margin-left: -20px;
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 6px rgba(0, 255, 100, 0.8);
+}
+
+/* Hover efecto glow en listas */
+.ranking li:hover,
+.featured ul li:hover {
+    background-color: rgba(0, 255, 106, 0.15);
+    box-shadow: 0 0 10px #00ff6a;
+    transition: 0.3s;
+}
+
+/* =========================
+   Footer
+========================= */
 footer {
     text-align: center;
     padding: 20px;
     background-color: #070707;
     margin-top: 40px;
-    box-shadow: 0 -4px 6px rgba(255, 123, 0, 0.3);
+    box-shadow: 0 -4px 6px rgba(0, 255, 100, 0.3);
 }
 
 footer p {
-    color: #fcc36d;
+    color: #00ff6a;
 }
 
-
+/* =========================
+   Centrado
+========================= */
 .center {
     text-align: center;
     margin: 30px 0;
 }
 
-
+/* =========================
+   Media Queries
+========================= */
 @media (max-width: 768px) {
     .cards {
         flex-direction: column;
