@@ -1,0 +1,188 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-image: url(https://wallpapers.com/images/hd/dark-texture-background-1ww1corpzr0l0sji.jpg);
+    color: #e98441; 
+    line-height: 1.6;
+}
+
+
+
+header {
+    background-color: #070707;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(255, 0, 0, 0.3);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #ff7300;
+    text-shadow: 2px 2px 4px rgba(255, 0, 0, 0.925);
+    margin-bottom: 10px;
+}
+
+header nav a {
+    color: #f15900;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+header nav a:hover, header nav a.active {
+    color: #ff7b00;
+    text-shadow: 1px 1px 5px rgb(255, 0, 0);
+}
+
+
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #0d0d0d 0%, #111111 100%);
+}
+
+.hero h2 {
+    font-size: 2rem;
+    color: #ff6600;
+    text-shadow: 2px 2px 8px rgb(255, 0, 0);
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 3px rgb(255, 0, 0);
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #ff080052;
+    color: #e6dbdb;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #cc4100;
+    box-shadow: 0 0 15px rgb(255, 0, 0);
+}
+
+
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+    gap: 25px;
+}
+
+.cards article {
+    background-color: #111111;
+    border: 2px solid #ff7300;
+    border-radius: 12px;
+    padding: 20px;
+    width: 280px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.cards article:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px #ff4800;
+}
+
+.cards img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.cards h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 4px rgb(255, 30, 0);
+}
+
+
+.ranking {
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.ranking h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 25px;
+    text-shadow: 2px 2px 6px rgb(255, 38, 0);
+}
+
+.ranking ol {
+    list-style: decimal;
+    padding-left: 20px;
+}
+
+.ranking li {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 3px rgb(255, 51, 0);
+}
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #070707;
+    margin-top: 40px;
+    box-shadow: 0 -4px 6px rgba(255, 123, 0, 0.3);
+}
+
+footer p {
+    color: #fcc36d;
+}
+
+
+.center {
+    text-align: center;
+    margin: 30px 0;
+}
+
+
+@media (max-width: 768px) {
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h2 {
+        font-size: 1.3rem;
+    }
+
+    .cards article {
+        width: 90%;
+    }
+
+    .btn {
+        padding: 10px 20px;
+    }
+}
